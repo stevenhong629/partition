@@ -506,6 +506,7 @@ class Solver {
 
 int main(int argc, char *argv[]) {
     string inputFile(argv[1]);
-    cout << (new Solver(inputFile))->solve();
+    ofstream outfile(argv[2], ios::out);
+    outfile << (new Solver(inputFile))->solve();
     return 0;
 }
